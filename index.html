@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Feedback Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+    </div>
+
+    <button class="theme-toggle" aria-label="Toggle theme">
+        🌙
+    </button>
+
+  <header>
+    <h1>Hotel Feedback Form</h1>
+    <p>Thank you for staying with us. Your feedback helps us improve.</p>
+  </header>
+
+  <main>
+    <form 
+      method="POST"
+      action="https://hotel-feedback.freecodecamp.org"
+      aria-labelledby="form-title"
+    >
+
+      <!-- PERSONAL INFO -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+        <input
+          type="text"
+          id="full-name"
+          name="name"
+          placeholder="John Doe"
+          required
+          minlength="3"
+          aria-required="true"
+        >
+
+        <label for="email">Email Address <span aria-hidden="true">*</span></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com"
+          required
+          aria-required="true"
+        >
+
+        <label for="age">Age</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="3"
+          max="100"
+        >
+      </fieldset>
+
+      <!-- FIRST TIME -->
+      <fieldset>
+        <legend>Was this your first time at our hotel?</legend>
+
+        <div class="option-group">
+          <input type="radio" id="yes" name="first-time" value="yes" required>
+          <label for="yes">Yes</label>
+
+          <input type="radio" id="no" name="first-time" value="no">
+          <label for="no">No</label>
+        </div>
+      </fieldset>
+
+      <!-- REASONS -->
+      <fieldset>
+        <legend>Why did you choose our hotel?</legend>
+
+        <div class="option-group">
+          <input type="checkbox" id="ads" name="reason" value="ads">
+          <label for="ads">Social Media Ads</label>
+
+          <input type="checkbox" id="recommendation" name="reason" value="recommendation">
+          <label for="recommendation">Personal Recommendation</label>
+
+          <input type="checkbox" id="location" name="reason" value="location">
+          <label for="location">Location</label>
+
+          <input type="checkbox" id="reputation" name="reason" value="reputation" checked>
+          <label for="reputation">Reputation</label>
+
+          <input type="checkbox" id="price" name="reason" value="price">
+          <label for="price">Price</label>
+        </div>
+      </fieldset>
+
+      <!-- RATINGS -->
+      <fieldset>
+        <legend>Ratings</legend>
+
+        <label for="service">Service Quality</label>
+        <select id="service" name="service" required>
+          <option value="">-- Choose --</option>
+          <option value="poor">Poor</option>
+          <option value="satisfactory">Satisfactory</option>
+          <option value="good">Good</option>
+          <option value="very-good">Very Good</option>
+          <option value="excellent">Excellent</option>
+        </select>
+
+        <label for="food">Food Quality</label>
+        <select id="food" name="food" required>
+          <option value="">-- Choose --</option>
+          <option value="poor">Poor</option>
+          <option value="satisfactory">Satisfactory</option>
+          <option value="good">Good</option>
+          <option value="very-good">Very Good</option>
+          <option value="excellent">Excellent</option>
+        </select>
+      </fieldset>
+
+      <!-- COMMENTS -->
+      <label for="comments">Additional Comments</label>
+      <textarea
+        id="comments"
+        name="comments"
+        rows="5"
+        placeholder="Write your comments here..."
+      ></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Hotel Feedback Project</p>
+  </footer>
+<script src="script.js"></script>
+
+</body>
+</html>
